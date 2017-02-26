@@ -110,7 +110,7 @@ function listMajors(auth) {
   var sheets = google.sheets('v4');
   sheets.spreadsheets.values.get({
     auth: auth,
-    spreadsheetId: auth.sheetId,
+    spreadsheetId: auth.sheetID,
     range: 'Materia!A3:D',
   }, function(err, response) {
     if (err) {
