@@ -19,7 +19,7 @@ module.exports = class AddNumbersCommand extends Commando.Command {
 				{
 					key: 'numbers',
 					label: 'number',
-					prompt: 'What numbers are we adding? Each message you send will be a single digit.',
+					prompt: 'What numbers are we adding? Each message you send will be a single value.',
 					type: 'float',
 					infinite: true
 				}
