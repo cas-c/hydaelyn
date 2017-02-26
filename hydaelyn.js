@@ -53,6 +53,6 @@ client.setProvider(
 	sqlite.open(path.join(__dirname, 'database.sqlite3')).then(db => new Commando.SQLiteProvider(db))
 ).catch(console.error);
 
-client.registry.registerGroup('math', 'Math').registerDefaults().registerCommandsIn(path.join(__dirname, 'commands'));
+client.registry.registerGroup('math', 'Math').registerGroup('ffxiv', 'FFXIV').registerDefaults().registerCommandsIn(path.join(__dirname, 'commands'));
 
 client.login(auth.token);
