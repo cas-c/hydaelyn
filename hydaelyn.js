@@ -1,10 +1,10 @@
 const Commando = require('discord.js-commando');
 const path = require('path');
 const sqlite = require('sqlite');
-const token = require('./auth').token;
+const auth = require('./auth');
 
 const client = new Commando.Client({
-	owner: '120358504824307716',
+	owner: auth.owner,
 	commandPrefix: ''
 });
 
@@ -14,4 +14,4 @@ client.setProvider(
 
 client.registry.registerGroup('math', 'Math').registerDefaults().registerCommandsIn(path.join(__dirname, 'commands'));
 
-client.login(token);
+client.login(auth.token);
